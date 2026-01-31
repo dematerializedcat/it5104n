@@ -1,0 +1,74 @@
+[gd_scene load_steps=12 format=3 uid="uid://dofelnaywtstd"]
+
+[ext_resource type="Texture2D" uid="uid://do2u5wguqr4nq" path="res://pixil-frame-0.png" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://hnk1tdwvrjvs" path="res://animated_sprite_2d.gd" id="2_0e48y"]
+[ext_resource type="Script" uid="uid://bi01do70jcmkb" path="res://character_body_2d_2.gd" id="3_0hol4"]
+[ext_resource type="Texture2D" uid="uid://kh5omx4pl5gy" path="res://pixilart-sprite.png" id="3_epypp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
+size = Vector2(52, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e48y"]
+atlas = ExtResource("1_wtcfe")
+region = Rect2(0, 0, 50, 5)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y32ns"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e48y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6r6c"]
+atlas = ExtResource("3_epypp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
+atlas = ExtResource("3_epypp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d21ai"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6r6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdubu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rj586"]
+size = Vector2(16, 17)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+visible = false
+shape = SubResource("RectangleShape2D_0hol4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(88, 22)
+sprite_frames = SubResource("SpriteFrames_y32ns")
+script = ExtResource("2_0e48y")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+script = ExtResource("3_0hol4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
+position = Vector2(37, 46)
+sprite_frames = SubResource("SpriteFrames_d21ai")
+frame_progress = 0.48761788
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+visible = false
+shape = SubResource("RectangleShape2D_rj586")
