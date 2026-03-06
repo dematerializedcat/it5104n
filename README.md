@@ -15,3 +15,6 @@ added death (restart scene) and portal system (next scene)
 3/6/2026
 did 3d... i died
 <img width="1920" height="1080" alt="Screenshot 2026-03-06 at 4 54 01 PM" src="https://github.com/user-attachments/assets/5d77492d-d35b-494f-84ea-2b15e60aab95" />
+
+did week 3 acts (late)
+<img width="1920" height="1080" alt="Screenshot 2026-03-06 at 6 24 50 PM" src="https://github.com/user-attachments/assets/95635ce0-2048-4ac0-8198-72a6db7804ad" />
