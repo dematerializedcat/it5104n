@@ -11,3 +11,7 @@ made a simple, bare bones platformer character with collision physics and left/r
 2/21/2026
 added death (restart scene) and portal system (next scene)
 <img width="1920" height="1080" alt="Screenshot 2026-02-21 at 6 16 35 PM" src="https://github.com/user-attachments/assets/b7f77bd3-d557-4cbd-b0bb-7d0b935ef302" />
+
+3/6/2026
+did 3d... i died
+<img width="1920" height="1080" alt="Screenshot 2026-03-06 at 4 54 01 PM" src="https://github.com/user-attachments/assets/5d77492d-d35b-494f-84ea-2b15e60aab95" />
