@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dqv8fdoypkrxe"]
+[gd_scene load_steps=12 format=3 uid="uid://dqv8fdoypkrxe"]
 
 [ext_resource type="Script" uid="uid://ob4h36mts7jl" path="res://player.gd" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://fjtlmq162rhg" path="res://MC_jump_dash.png" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://blvh41ldldqoe" path="res://MC_walk_anim.png" id="2_i3pqv"]
+[ext_resource type="Script" uid="uid://dmy5ri17u0sd4" path="res://camera_2d.gd" id="4_hqtel"]
+[ext_resource type="AudioStream" uid="uid://bjau72uclmher" path="res://dash2.wav" id="5_sweqy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
 atlas = ExtResource("1_onrkg")
@@ -50,6 +52,11 @@ size = Vector2(16, 16)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_i3pqv")
+speed = null
+acceleration = null
+friction = null
+jump_velocity = null
+gravity = null
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -58,3 +65,12 @@ animation = &"up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_b26j0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+script = ExtResource("4_hqtel")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="dash" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource("5_sweqy")
